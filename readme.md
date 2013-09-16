@@ -1,5 +1,5 @@
 jumpandrunsailorgirl
- ====================
+=======================
  
 Haxe + OpenFL + HaxeFlixel で作ったサンプルゲームです。
 
