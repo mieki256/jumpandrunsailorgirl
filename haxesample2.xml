@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<app title="Jump and run sailor girl" file="haxesample2" main="Main" version="0.0.1" company="Zaphod" />
+	
+	<window width="640" height="480" fps="30" orientation="portrait" resizable="true" if="web" />
+	<window width="640" height="480" fps="30" orientation="landscape" fullscreen="false" hardware="true" vsync="true" unless="web" />
+ 	
+	<set name="BUILD_DIR" value="export" />
+	
+	<!--<setenv name="no_console" value="1" />-->
+	
+	<classpath name="source" />
+	
+    <assets path="assets" exclude="*.wav|*.ogg" if="flash" />
+	<assets path="assets" exclude="*.svg|*.wav" if="html5" />
+    <assets path="assets/data/Play-Bold.ttf" id="PlayBold" type="font" />
+    
+    <assets path="assets" if="android">
+        <assets path="data/beep.wav" id="Beep" type="sound" />
+        <assets path="sounds/jump.wav" id="SeJump" type="sound" />
+        <assets path="sounds/stand2.wav" id="SeStand" type="sound" />
+        <assets path="sounds/getruby.wav" id="SeRuby" type="sound" />
+        <assets path="sounds/run_30fps20pat.wav" id="SeRun" type="sound" />
+        <assets path="sounds/bokunobanana.wav" id="SeBanana" type="sound" />
+        <assets path="sounds/shake.wav" id="SeShake" type="sound" />
+        <assets path="sounds/stageclear.wav" id="SeStageClear" type="sound" />
+        <assets path="sounds/itsanewrecord.wav" id="SeNewRecord" type="sound" />
+        <assets path="sounds/level1_bgm.wav" id="BgmLevel1" type="music" />
+        <assets path="sounds/allstageclear_bgm.wav" id="BgmAllStageClear" type="music" />
+        <assets path="sounds/title_bgm.wav" id="BgmTitle" type="music" />
+    </assets>
+
+    <assets path="assets" if="desktop">
+        <assets path="data/beep.wav" id="Beep" type="sound" />
+        <assets path="sounds/jump.wav" id="SeJump" type="sound" />
+        <assets path="sounds/stand2.wav" id="SeStand" type="sound" />
+        <assets path="sounds/getruby.wav" id="SeRuby" type="sound" />
+        <assets path="sounds/run_30fps20pat.wav" id="SeRun" type="sound" />
+        <assets path="sounds/bokunobanana.wav" id="SeBanana" type="sound" />
+        <assets path="sounds/shake.wav" id="SeShake" type="sound" />
+        <assets path="sounds/stageclear.wav" id="SeStageClear" type="sound" />
+        <assets path="sounds/itsanewrecord.wav" id="SeNewRecord" type="sound" />
+        <assets path="sounds/level1_bgm.wav" id="BgmLevel1" type="music" />
+        <assets path="sounds/allstageclear_bgm.wav" id="BgmAllStageClear" type="music" />
+        <assets path="sounds/title_bgm.wav" id="BgmTitle" type="music" />
+    </assets>
+    
+    <assets path="assets" if="flash">
+        <assets path="data/beep.mp3" id="Beep" type="sound" />
+        <assets path="sounds/jump.mp3" id="SeJump" type="sound" />
+        <assets path="sounds/stand2.mp3" id="SeStand" type="sound" />
+        <assets path="sounds/getruby.mp3" id="SeRuby" type="sound" />
+        <assets path="sounds/run_30fps20pat.mp3" id="SeRun" type="sound" />
+        <assets path="sounds/bokunobanana.mp3" id="SeBanana" type="sound" />
+        <assets path="sounds/shake.mp3" id="SeShake" type="sound" />
+        <assets path="sounds/stageclear.mp3" id="SeStageClear" type="sound" />
+        <assets path="sounds/itsanewrecord.mp3" id="SeNewRecord" type="sound" />
+        <assets path="sounds/level1_bgm.mp3" id="BgmLevel1" type="music" />
+        <assets path="sounds/allstageclear_bgm.mp3" id="BgmAllStageClear" type="music" />
+        <assets path="sounds/title_bgm.mp3" id="BgmTitle" type="music" />
+    </assets>
+	
+    <assets path="assets" if="html5">
+        <assets path="data/beep.mp3" id="Beep" type="sound" />
+        <assets path="sounds/jump.mp3" id="SeJump" type="sound" />
+        <assets path="sounds/stand2.mp3" id="SeStand" type="sound" />
+        <assets path="sounds/getruby.mp3" id="SeRuby" type="sound" />
+        <assets path="sounds/run_30fps20pat.mp3" id="SeRun" type="sound" />
+        <assets path="sounds/bokunobanana.mp3" id="SeBanana" type="sound" />
+        <assets path="sounds/shake.mp3" id="SeShake" type="sound" />
+        <assets path="sounds/stageclear.mp3" id="SeStageClear" type="sound" />
+        <assets path="sounds/itsanewrecord.mp3" id="SeNewRecord" type="sound" />
+        <assets path="sounds/level1_bgm.mp3" id="BgmLevel1" type="music" />
+        <assets path="sounds/allstageclear_bgm.mp3" id="BgmAllStageClear" type="music" />
+        <assets path="sounds/title_bgm.mp3" id="BgmTitle" type="music" />
+    </assets>
+	
+	<assets path="assets" if="desktop" />
+	<assets path="assets" if="mobile" />
+    
+	<icon name="assets/HaxeFlixel.svg" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="flixel"/>
+	
+    <!--Disable the Flixel core debugger-->
+    <!--<haxedef name="FLX_NO_DEBUG" />-->
+	
+    <!--Disable the Flixel core recording system if you're not using it-->
+    <!--<haxedef name="FLX_NO_RECORD" />-->
+	
+	<!--Optimise inputs, be careful you will get null errors if you don't use conditionals in your game-->
+    <!--<haxedef name="FLX_NO_MOUSE" if="mobile" />-->
+    <!--<haxedef name="FLX_NO_KEYBOARD" if="mobile" />-->
+    <!--<haxedef name="FLX_NO_TOUCH" if="desktop" />-->
+    <!--<haxedef name="FLX_NO_JOYSTICK" />-->
+    <!--<haxedef name="thread" />-->
+	
+	<!--Disable the Flixel core sound tray-->
+	<!--<haxedef name="FLX_NO_SOUND_TRAY" />-->
+
+	<!--Disable the Flixel core focus lost screen-->
+	<!--<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />-->
+	
+	<!--Enable right and middle click support for the mouse. Requires flash player version 11.2 or higher. Doesn't work for HTML5. -->
+	<!--<haxedef name="FLX_MOUSE_ADVANCED" />-->
+	<!--<app swf-version="11.2" />--> 
+
+</project>
