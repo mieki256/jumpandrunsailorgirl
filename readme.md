@@ -1,6 +1,6 @@
-Jump nd run sailor girl - HaxeFlixel Sample
-==============================================
-
+jumpandrunsailorgirl
+ ====================
+ 
 Haxe + OpenFL + HaxeFlixel で作ったサンプルゲームです。
 
 ScreenShot
