@@ -340,6 +340,7 @@ class Stage1 extends FlxState
         playSe("ruby");
         
         // 開発用：trueにすると、1つ宝石を取るだけでクリアできる
+        //var dbg:Bool = true;
         var dbg:Bool = false;
         
         if ( getRubyCount >= rubys.length || dbg) {
